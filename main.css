@@ -1,17 +1,16 @@
 :root {
-    --background:#FFFFFF;
-    --dark-accent:#EEAD8A;
-    --light-accent:#FFEDE4;
+    --background: #FFFFFF;
+    --dark-accent: #EEAD8A;
+    --light-accent: #FFEDE4;
     --foreground: #000000;
 }
 
 @font-face {
-    font-family:"anek tamil";
+    font-family: "anek tamil";
     src: url("/assets/fonts/anek-tamil-tamil-800-normal.ttf");
-    font-style:normal;
+    font-style: normal;
 }
 
-/* anek-tamil-latin-800-normal */
 @font-face {
   font-family: 'Anek Tamil';
   font-style: normal;
@@ -29,7 +28,7 @@
 }
 
 header {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items:center;
     background-color: var(--light-accent);
@@ -44,21 +43,25 @@ ul {
 }
 
 .logoImgFlex {
+    display: flex;
     gap: 12px;
 }
 
 li {
-    display:flex;
+    display: flex;
     align-items: center;
     font-family: "Geist Mono",monospace;
     font-size: 15px;
     text-transform: uppercase;
 }
 
-.backgroundBttnStyle {
+.backgroundBttnStyle button {
     background-color: var(--dark-accent);
     padding: 6px;
     border-radius: 5px;
+    display: unset;
+    border: none;
+    text-transform: uppercase;
 }
 
 h1, h2 { 
@@ -72,43 +75,8 @@ h1, h2 {
 }
 
 h2 {
-    margin-left : 5px;
+    margin-left: 5px;
     gap: 14px;
-}
-.darkAccentHighlight {
-    color: var(--dark-accent);
-}
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
-    outline:1px solid black;
-}
-
-.asianModel {
-    width: 100%;
-    height:100%;
-    grid-column: 1/3;
-}
-
-.makeUpService {
-    grid-row:1 ;
-    grid-column: 3;
-    background-color: var(--light-accent);
-    padding:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    outline: 1px solid black;
-}
-
-.makeUpServiceFlex{
-    position: relative;
-    bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 h3 {
@@ -119,21 +87,73 @@ h3 {
     justify-content: flex-start;
 }
 
+h4 {
+    font-family: "anek tamil";
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+h5 {
+    font-family: "anek tamil";
+    font-size: 22px;
+    font-style: none;
+}
+
+.darkAccentHighlight {
+    color: var(--dark-accent);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    outline: 1px solid black;
+}
+
+.asianModel {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/3;
+}
+
+.makeUpService {
+    grid-row:1 ;
+    grid-column: 3;
+    background-color: var(--light-accent);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: 1px solid black;
+}
+
+.makeUpServiceFlex {
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.makeUpServiceFlex button {
+    width: max-content;
+}
+
 p {
     font-family: "Geist";
     font-size: 17px;
 }
 
 button {
-    font-family:"Geist Mono";
-    font-size:15px;
+    font-family: "Geist Mono";
+    font-size: 15px;
     background-color: black;
     border-radius: 6px;
-    padding:12px 17px;
+    padding: 12px 17px;
 }
 
 button a {
-    color:white;
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -150,7 +170,7 @@ button a {
     background-color: var(--light-accent);
     display: flex;
     width: 100%;
-    height:100%;
+    height: 100%;
     outline: 1px solid black;
 }
 
@@ -162,48 +182,41 @@ button a {
 
 .sshModelImg {
     width: 100%;
-    height:100%;
+    height: 100%;
     grid-column: 2;
     border-top: 1px solid black;
 } 
 
-h4 {
-    font-family: "anek tamil";
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.discoverBox {
+.discoverGrid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.thinkTitleRowGrid, 
-.foundationContentHeading, 
-.lipstickContentHeading, 
-.eyeshadowContentHeading, .discoveryBttn {
+.discoverFrame {
     grid-column: 1;
+    padding: 20px;
+    border-top: 1px solid black;
 }
 
 .thinkTitleRowGrid {
     grid-row: 1;
+    padding: 20px;
+    border-top: 1px solid black;
 }
-.foundationContentHeading{
-    grid-row:2;
 
+.foundationContentHeading{
+    grid-row: 2;
 }
+
 .eyeshadowContentHeadin {
     grid-row: 3;
 }
 
 .discoveryBttn {
-    grid-row:5;
-    display:flex;
+    grid-row: 5;
+    display: flex;
     align-items: center;
-}
-
-.box, .discoveryBttn, .thinkTitleRowGrid {
-    padding: 20px;
+    border-bottom: none;
 }
 
 .expertise {
@@ -220,12 +233,11 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: inherit;
 }
+
 .centeredTitle {
-    font-family: "anek tamil";
     font-size: 57px;
-    text-transform: uppercase;
     text-align: center;
     line-height: 55px;
 }
@@ -236,11 +248,11 @@ footer {
     justify-content: space-between;
     background-color: var(--light-accent);
     height: 480px;
-    outline:1px black solid;   
+    outline: 1px black solid;   
 }
 
 .flexLogoImg {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     padding: 15px;
 }
@@ -248,14 +260,7 @@ footer {
 .detailsFlex {
     display: flex;
     justify-content: space-between;
-    padding:20px;
-    mix-blend-mode: normal;
-}
-
-h5 {
-    font-family: "anek tamil";
-    font-size: 22px;
-    font-style: none;
+    padding: 20px;
 }
 
 address {
@@ -263,7 +268,6 @@ address {
     flex-direction: column;
     font-style: normal;
     gap: 2px;
-
 }
 
 address a, .socialFlex a {
@@ -275,26 +279,17 @@ address a, .socialFlex a {
     text-transform: uppercase;
 }
 
-.scheduleFlex{
+.footerFlexColumn {
     display: flex;
     flex-direction: column;
-    gap:2px;
+    gap:5px;
+}
+.footerFlexColumn ul, .footerFlexColumn a{
+    line-height: 16px;
 }
 
-.scheduleFlexRow{
+.scheduleFlexRow {
     display: flex;
     flex-direction: row;
-    gap:20px;
-}
-
- .weekFlex, .hoursFlex {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
- }
-
-.socialFlex {
-    display: flex;
-    flex-direction: column;
-    gap:2px;
+    gap: 20px;
 }

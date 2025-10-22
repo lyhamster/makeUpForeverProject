@@ -30,7 +30,6 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items:center;
     background-color: var(--light-accent);
     padding: 20px;
     outline: 1px solid black;
@@ -292,4 +291,15 @@ address a, .socialFlex a {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.navNew {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.box1 {
+    grid-column: 1;
+    grid-row: 1/ span 3;
 }

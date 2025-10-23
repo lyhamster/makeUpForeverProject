@@ -29,10 +29,15 @@
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--light-accent);
+}
+
+.header--flex {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    outline: 1px solid black;
 }
 
 ul {
@@ -293,13 +298,42 @@ address a, .socialFlex a {
     gap: 20px;
 }
 
-.navNew {
+.dropdownMenu {
     display: grid;
     width: 100%;
     grid-template-columns: auto 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    position: absolute;
+    top: 80px;
+    background-color: white;
 }
-.box1 {
+
+.dropdownMenu__title {
+    font-size: 45px;
+    color: white;
+    background-color: black;
+    padding: 16px 20px;
+}
+
+.border {
+    border-bottom: 1px solid black;
+    border-inline: 1px solid black;
+}
+
+.dropdownMenu__card--grid {
     grid-column: 1;
     grid-row: 1/ span 3;
+}
+
+.borderMenu__img--flex {
+    display: flex;
+    border-inline: unset;
+}
+
+.dropdownMenu__hgroup {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 5px;
+    padding: 20px;
 }

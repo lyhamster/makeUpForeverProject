@@ -28,10 +28,10 @@
 }
 
 header {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--light-accent);
+    position: relative;
 }
 
 .header--flex {
@@ -303,9 +303,9 @@ address a, .socialFlex a {
     width: 100%;
     grid-template-columns: auto 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    position: absolute;
-    top: 80px;
     background-color: white;
+    position: absolute;
+    z-index:1;
 }
 
 .dropdownMenu__title {
@@ -336,4 +336,12 @@ address a, .socialFlex a {
     text-transform: uppercase;
     gap: 5px;
     padding: 20px;
+}
+
+.navlistNews:hover .dropdownMenu {
+    display:none;
+}
+
+.navlistNews:hover + .dropdownMenu {
+    visibility: hidden;
 }

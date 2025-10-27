@@ -36,6 +36,7 @@ header {
 
 .header--flex {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
@@ -317,6 +318,11 @@ address a, .socialFlex a {
 
 }
 
+.navWrapper {
+    display: flex;
+    gap: 10px;
+}
+
 .dropdownMenu {
     display: grid;
     width: 100%;
@@ -334,11 +340,18 @@ address a, .socialFlex a {
 
 }
 
-.title_hover {
+.navTitle {
+    background-color: black;
+    color: white;
+    font-family: "geist mono";
+    font-weight: 15px;
     cursor: grab;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.title_hover:hover + .dropdownMenu {
+.navTitle:hover + .dropdownMenu {
     visibility: visible;
     animation-name: dropdown-transition;
     animation-duration: 500ms;
@@ -381,32 +394,21 @@ address a, .socialFlex a {
 
 .dropdownMenu--bestseller {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto;
     visibility: visible;
-
 }
 
-.title--section { 
+.title--section {
     display: grid;
- 
-}
-
-.bestsellerImg{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 1;
-    grid-column: 2;
-
 }
 
 .title {
-    grid-column: 1;
+    display: flex;
 }
 
-.titleHd {
-    grid-row:2;
+.bestsellerImg{
+    grid-row: 1;
+    grid-column: 2;
 }
-
 
 

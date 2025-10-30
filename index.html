@@ -11,17 +11,57 @@
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <body>
         <header>
-            <div class="logoImgFlex">
-                <img src="/assets/img/image 532.png" alt="logo make up forever mouth" width="82px" height="41px">   
-                <img src="assets/img/image 531-1.png" alt="logo male up forever typo" width="82px" height="41px">  
+            <div class="header--flex">
+                <div class="logoImgFlex">
+                    <img src="/assets/img/image 532.png" alt="logo make up forever mouth" width="82px" height="41px">   
+                    <img src="assets/img/image 531-1.png" alt="logo male up forever typo" width="82px" height="41px">  
+                </div>
+                <div class="navWrapper">
+                    <section>
+                        <a class="navTitle">nouveautés</a>
+                        <div class="dropdownMenu dropdownMenu--news">
+                            <div class="dropdownMenu__card--grid">
+                                <h4 class="dropdownMenu__title">nos nouveautés</h4>
+                                <div class="borderMenu__img--flex border">    
+                                    <img src="/assets/img/stickCream.png" alt="stick cream"> 
+                                    <img src="/assets/img/powder.png" alt="setting powder">
+                                </div>
+                            </div>
+                            <div class="dropdownMenu__hgroup border">
+                                <h3>gamme super boost</h3>
+                                <p>super boost skin tint & lip gloss</p>
+                            </div>
+                            <div class="dropdownMenu__hgroup border border--right">
+                                <h3>poudres</h3>
+                                <p>hd skin perfecting powders</p>
+                            </div>
+                            <div class="dropdownMenu__hgroup border">
+                                <h3>stick</h3>
+                                <p>artist color crayons</p>
+                            </div>
+                            <div class="dropdownMenu__hgroup border border--right">
+                                <h3>anti-cernes</h3>
+                                <p>couvrance totale</p>   
+                        </div>   
+                    </section> 
+                    <section>
+                        <a class="navTitle">best-seller</a>
+                        <div class=" dropdownMenu dropdownMenu--bestseller">
+                            <div class="title--section">
+                                <h4 class="title bestseller">bestseller</h4>
+                                <h4 class="title titleHd">hd skin</h4>
+                                <h4 class="title titleArtist">artist</h4>   
+                                <h4 class="title titleAqua">aqua resist</h4>   
+                                <h4 class="title titleSuper">super boost</h4> 
+                            </div>
+                            <div class="bestsellerImg">
+                                <img class="bestsellerImg--foundation" src="/assets/img/foundation.png"> 
+                                <img class="bestsellerImg--palette" src="/assets/img/palettes.png">
+                            </div>
+                        </div> 
+                    </section> 
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li>nouveautés</li>
-                    <li>best-seller</li>
-                    <li class="backgroundBttnStyle"><button>découvrir la maison</button></li>
-                </ul>
-            </nav>
         </header>
         <main>
             <h1>make up.<span class="darkAccentHighlight">for ever.</span></h1>
@@ -31,7 +71,12 @@
                     <h3>pour vous, par nos makeup artists</h3>
                     <div class="makeUpServiceFlex">
                         <p>Nous mettons à votre service l'expertise de notre collectif de makeup artists pour vous proposer les produits les plus innovants et performants.</p>
-                        <button><a href="">à propos</a></button>
+                        <button>
+                            <div class="overflowPadding">
+                                <p><a href="">à propos</a></p>
+                                <p class="textAnimation"><a>à propos</a></p>
+                            </div>
+                        </button>
                     </div>
                 </div>
                 <div class="history">
@@ -63,7 +108,12 @@
                         <p>Ce sont des produits pour les yeux aux textures resistantes à l'eau.</p>
                     </div>
                     <div class=" discoverFrame discoveryBttn">
-                        <button><a href="">découvrir</a></button>
+                        <button>
+                            <div class="overflowPadding">
+                                <p><a href="">découvrir</a></p>
+                                <p class="textAnimation"><a href="">découvrir</a></p>
+                            </div>
+                        </button>
                     </div>
                 </div>
                 <img class="sshModelImg" src="/assets/img/shushModel.png" alt="Model who shh with her finger">
@@ -74,7 +124,12 @@
                     <h2 class="centeredTitle">plus de 20 ans d'expertise dans la formation</h2>
                 </hgroup>
                 <div class="academyBttn">
-                    <button><a href="">Academy Exhibition</a></button>
+                    <button>
+                        <div class="overflowPadding">
+                            <p><a href="">Academy Exhibition</a></p>
+                            <p class="textAnimation"><a href="">Academy Exhibition</a></p>
+                        </div>
+                    </button>
                 </div>
             </section>
             <footer>
@@ -115,5 +170,6 @@
                 </div>
             </footer>
         </main>
+        <script type="module" src="main.js"></script>
     </body>
 </html>

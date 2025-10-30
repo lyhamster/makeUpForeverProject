@@ -28,12 +28,17 @@
 }
 
 header {
-    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items:center;
     background-color: var(--light-accent);
+    position: relative;
+}
+
+.header--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    outline: 1px solid black;
 }
 
 ul {
@@ -293,3 +298,117 @@ address a, .socialFlex a {
     flex-direction: row;
     gap: 20px;
 }
+
+@keyframes dropdown-transition {
+
+    0% {
+        opacity:0;
+        transform: translateY(-15px);
+    }; 
+    40% {
+        opacity: 0;
+        transform: translateY(-0px);
+    };
+    80% {
+        opacity: 0.50;
+    };
+    100% {
+        opacity: 1;
+    };
+
+}
+
+.navWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdownMenu {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    background-color: white;
+}
+
+.dropdownMenu--news {
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.navTitle {
+    background-color: black;
+    color: white;
+    font-family: "geist mono";
+    font-weight: 15px;
+    cursor: grab;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navTitle:hover + .dropdownMenu {
+    visibility: visible;
+    animation-name: dropdown-transition;
+    animation-duration: 500ms;
+    
+    opacity:1;
+}
+
+.dropdownMenu__title {
+    font-size: 45px;
+    color: white;
+    background-color: black;
+    padding: 16px 20px;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.border--right {
+    border-right: none;
+}
+
+.dropdownMenu__card--grid {
+    grid-column: 1;
+    grid-row: 1/ span 3;
+}
+
+.borderMenu__img--flex {
+    display: flex;
+    border-inline: unset;
+}
+
+.dropdownMenu__hgroup {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 5px;
+    padding: 20px;
+}
+
+.dropdownMenu--bestseller {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    visibility: visible;
+}
+
+.title--section {
+    display: grid;
+}
+
+.title {
+    display: flex;
+}
+
+.bestsellerImg{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+

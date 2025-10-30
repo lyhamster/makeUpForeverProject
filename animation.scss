@@ -1,0 +1,38 @@
+li:hover{
+    color: gray;
+    cursor: grab;
+}
+
+button {
+    position : relative;
+    padding: 9px !important;
+
+    & .overflowPadding {
+        position: relative;
+        overflow: hidden;
+    }
+
+    & .bttnTopAnimation {
+        position: absolute;
+        transform: translateY(20px) ;
+        transition : transform 350ms cubic-bezier(.35,.14,.31,1);
+    }
+
+    & .textAnimation {
+        position: absolute;
+    }
+
+    & p {
+        transition: transform 200ms ;
+    }
+
+}  
+
+button:hover {
+    cursor: grab;
+}
+
+button:hover p { 
+    transform: translateY(-25px);
+}
+

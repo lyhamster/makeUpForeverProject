@@ -1,0 +1,306 @@
+$main-bg: #FFFFFF;
+$dark-accent:  hsl(21, 75%, 74%);
+$light-accent: hsl(20, 100%, 95%);
+$main-fg: #000000;
+
+@font-face {
+    font-family: "anek tamil";
+    src: url("/assets/fonts/anek-tamil-tamil-800-normal.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anek Tamil';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff2) 
+    format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.ttf)
+    format('truetype'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff) 
+    format('woff');
+}
+
+// font variables and mixins/
+
+$main-font-headline: "anek tamil"; 
+$main-font-paragraph:"Geist"; 
+
+@mixin headline {
+    font-family: $main-font-headline;
+    font-size: 116px;
+    text-transform: uppercase;
+    color: black;
+}
+
+@mixin paragraph {
+    font-family: $main-font-paragraph;
+    font-size: 17px;
+    color: black;
+}
+
+@mixin link {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+// layout container /
+
+@mixin layoutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light-accent;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h1, h2 {
+    @include headline;
+    font-weight: bold;
+    margin: -10px 20px;
+    gap: 10px;
+}
+
+h3 { 
+    @include headline; 
+    font-size: 45px;
+    line-height: 1;
+    justify-content: flex-start;
+}
+
+h4 {
+    @include headline;
+    font-size: 25px;
+}
+
+h5 { 
+    @include headline; 
+    font-size: 22px;
+}
+
+p { 
+    @include paragraph;
+}
+
+.darkAccentHighlight {
+    color: $dark-accent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// header /
+header {
+    background-color: $light-accent;
+    position: relative;
+}
+
+.headerWrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+    &__logo {
+        display: flex; 
+        gap: 12px;
+    }
+}
+
+// main section/
+
+.section {
+    &--about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        gap: 10px;
+        margin: 10px;
+        margin-top:0px;
+    }
+    &__imgWrapper {
+        grid-column: 1/3;
+    }
+    &__img--asianModel {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+}
+
+.makeupService {
+    grid-row:1 ;
+    grid-column: 3;
+    @include layoutContainer;
+    &--Wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    } 
+}
+
+.history, 
+.greenInvolvement {
+    @include layoutContainer;
+}
+
+.greenInvolvement__img--powderFoundation {
+    background-color: $light-accent;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.section--discover { 
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    
+}
+
+.discover {
+    &__img--sshModelImg { 
+        width: 100%;
+        height: 100%;
+        grid-column: 2;
+        border-radius: 20px;
+    }
+    &__Wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        padding: 20px;
+        background-color: $light-accent;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+    &__title { 
+        grid-row: 1;
+    }
+    &__hgroup--foundation {
+        grid-row: 2;
+    }
+    &__bttnWrapper {
+        grid-row:5;
+        display:flex;
+        align-items: center;
+    }
+}
+
+.section--expertise { 
+    display: flex;
+    background-color: $dark-accent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+    gap: 18px;
+}
+
+.expertise {
+    &__hgroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: inherit;
+    }
+    &__title {
+        font-size: 57px;
+        text-align: center;
+        line-height: 55px;
+    }
+}
+
+// button /
+.section__bttn:hover {
+    cursor: grab;
+}
+
+.section__bttn {
+    position: relative;
+    padding: 8px;
+    background-color: $main-fg;
+    border-radius: 6px;
+    &--animationWrapper a {
+        @include link;
+    }
+}
+
+// footer/
+@mixin flex-spaceBetween () {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin footer-style-link {
+    font-family: "geist";
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light-accent;
+    height: 480px;
+}
+
+.footer { 
+    &__logoWrapper { 
+        @include flex-spaceBetween;
+        padding: 15px;
+    }
+    &__informations {
+        @include flex-spaceBetween;
+        padding: 20px;
+    }
+    &__informations--columns {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__informationsWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            font-family: "Geist Mono";
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+    &__informations--socials {
+        a {
+            @include footer-style-link;
+        }
+    }
+}
+
+.footerFlexColumn{
+    ul {
+        line-height: 16px;
+    }
+    a {
+        line-height: 16px;
+    }
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    gap: 2px;
+
+    a {
+        @include footer-style-link;
+    }
+}

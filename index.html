@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>MAKE UP FOREVER</title>
+        <link rel="shortcut icon" href="/assets/img/maquillage-mascara.png" >
         <meta charset="utf-8">
         <link href="main.css" rel="stylesheet"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,53 +12,52 @@
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <body>
         <header>
-            <div class="header--flex">
-                <div class="logoImgFlex">
+            <div class="headerWrapper">
+                <div class="headerWrapper__logo">
                     <img src="/assets/img/image 532.png" alt="logo make up forever mouth" width="82px" height="41px">   
                     <img src="assets/img/image 531-1.png" alt="logo male up forever typo" width="82px" height="41px">  
                 </div>
                 <div class="navWrapper">
                     <section>
                         <a class="navTitle">nouveautés</a>
+                        <div class="transitionZone"></div>
                         <div class="dropdownMenu dropdownMenu--news">
-                            <div class="dropdownMenu__card--grid">
-                                <h4 class="dropdownMenu__title">nos nouveautés</h4>
-                                <div class="borderMenu__img--flex border">    
-                                    <img src="/assets/img/stickCream.png" alt="stick cream"> 
-                                    <img src="/assets/img/powder.png" alt="setting powder">
-                                </div>
+                            <div class="dropdownMenu__card">
+                                <h4 class="dropdownMenu__title--grid dropdownMenu__title--corner dropdownMenu__title--padding">nos nouveautés</h4>   
+                                <img class="dropdownMenu__img--stickCream" src="/assets/img/stickCream.png" alt="stick cream"> 
+                                <img class="dropdownMenu__img--settingPowder" src="/assets/img/powder.png" alt="setting powder">
                             </div>
-                            <div class="dropdownMenu__hgroup border">
-                                <h3>gamme super boost</h3>
-                                <p>super boost skin tint & lip gloss</p>
+                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                                <h4 class="dropdownMenu--title">gamme super boost</h4>
+                                <p class="dropdownMenu--padding">super boost skin tint & lip gloss</p>
                             </div>
-                            <div class="dropdownMenu__hgroup border border--right">
-                                <h3>poudres</h3>
-                                <p>hd skin perfecting powders</p>
+                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                                <h4 class="dropdownMenu--title">poudres</h4>
+                                <p class="dropdownMenu--padding">hd skin perfecting powders</p>
                             </div>
-                            <div class="dropdownMenu__hgroup border">
-                                <h3>stick</h3>
-                                <p>artist color crayons</p>
+                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                                <h4 class="dropdownMenu--title">stick</h4>
+                                <p class="dropdownMenu--padding">artist color crayons</p>
                             </div>
-                            <div class="dropdownMenu__hgroup border border--right">
-                                <h3>anti-cernes</h3>
-                                <p>couvrance totale</p>   
+                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                                <h4 class="dropdownMenu--title">anti-cernes</h4>
+                                <p class="dropdownMenu--padding">couvrance totale</p>
+                            </div>   
                         </div>   
                     </section> 
                     <section>
                         <a class="navTitle">best-seller</a>
+                        <div class="transitionZone"></div>
                         <div class=" dropdownMenu dropdownMenu--bestseller">
-                            <div class="title--section">
-                                <h4 class="title bestseller">bestseller</h4>
-                                <h4 class="title titleHd">hd skin</h4>
-                                <h4 class="title titleArtist">artist</h4>   
-                                <h4 class="title titleAqua">aqua resist</h4>   
-                                <h4 class="title titleSuper">super boost</h4> 
+                            <div class="dropdownMenu__titleWrapper">
+                                <h4 class="dropdownMenu__title--corner">bestseller</h4>
+                                <h4 class="dropdownMenu--title dropdownMenu--border">hd skin</h4>
+                                <h4 class="dropdownMenu--title dropdownMenu--border">artist</h4>   
+                                <h4 class="dropdownMenu--title dropdownMenu--border">aqua resist</h4>   
+                                <h4 class="dropdownMenu--title dropdownMenu--border">super boost</h4> 
                             </div>
-                            <div class="bestsellerImg">
-                                <img class="bestsellerImg--foundation" src="/assets/img/foundation.png"> 
-                                <img class="bestsellerImg--palette" src="/assets/img/palettes.png">
-                            </div>
+                            <img class="dropdownMenu__img--bestsellerproducts" src="/assets/img/products.png"> 
+                            <img class="dropdownMenu__img--foundations" src="/assets/img/palette.png">
                         </div> 
                     </section> 
                 </div>
@@ -65,18 +65,22 @@
         </header>
         <main>
             <h1>make up.<span class="darkAccentHighlight">for ever.</span></h1>
-            <section class="about">
-                <img class="asianModel" src="/assets/img/asian-model.png" alt="Asian modal for skin foundation">
-                <div class="makeUpService">
+            <section class="section--about">
+                <div class="section__imgWrapper">
+                    <img class="section__img--asianModel" src="/assets/img/asian-model.png" alt="Asian modal for skin foundation">
+                </div>
+                <div class="makeupService">
                     <h3>pour vous, par nos makeup artists</h3>
-                    <div class="makeUpServiceFlex">
+                    <div class="makeupService--Wrapper">
                         <p>Nous mettons à votre service l'expertise de notre collectif de makeup artists pour vous proposer les produits les plus innovants et performants.</p>
-                        <button>
-                            <div class="overflowPadding">
-                                <p><a href="">à propos</a></p>
-                                <p class="textAnimation"><a>à propos</a></p>
-                            </div>
-                        </button>
+                        <div class="bttnWrapper">
+                            <button class="section__bttn">
+                                <div class="section__bttn--animationWrapper">
+                                    <p><a href="">à propos</a></p>
+                                    <p class="section__bttn--textAnimated"><a>à propos</a></p>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="history">
@@ -89,70 +93,68 @@
                     <h3>comitted for ever</h3>
                     <p>Ensemble, les équipes sont Commited For Ever, engagées pour vous proposer une beauté responsable et durable.</p>
                 </div>
-                <img  class="powderFoundationImg" src="/assets/img/foundationpowder.png" alt="make up forever foundation bi-color palette">
+                <img class="greenInvolvement__img--powderFoundation" src="/assets/img/foundationpowder.png" alt="make up forever foundation bi-color palette">
             </section>
             <h2>nos<span class="darkAccentHighlight">incontournables</span></h2>
-            <section class="discover">
-                <div class="discoverGrid">
-                    <h3 class="thinkTitleRowGrid">pensés pour vous</h3>
-                    <div class="discoverFrame foundationContentHeading">
+            <section class="section--discover">
+                <div class="discover__Wrapper">
+                    <h3 class=" discoverFrame discover__title">pensés pour vous</h3>
+                    <div class="discoverFrame discover__hgroup--foundation">
                         <h4>hd skin</h4>
                         <p>Effet seconde peau, vous assure un teint 0 défaut.</p>
                     </div>
-                    <div class="discoverFrame lipstickContentHeading">
+                    <div class="discoverFrame discover__hgroup--lipstick">
                         <h4>rouge artist</h4>
                         <p>40 nuances de couleurs, des rouges les plus intenses aux nudes parfaits.</p>
                     </div>
-                    <div class="discoverFrame eyeshadowContentHeading">
+                    <div class="discoverFrame discover__hgroup--waterproof">
                         <h4>aqua resist</h4>
                         <p>Ce sont des produits pour les yeux aux textures resistantes à l'eau.</p>
                     </div>
-                    <div class=" discoverFrame discoveryBttn">
-                        <button>
-                            <div class="overflowPadding">
+                    <div class="discover__bttnWrapper">
+                        <button class="section__bttn">
+                            <div class="section__bttn--animationWrapper">
                                 <p><a href="">découvrir</a></p>
-                                <p class="textAnimation"><a href="">découvrir</a></p>
+                                <p class="section__bttn--textAnimated"><a href="">découvrir</a></p>
                             </div>
                         </button>
                     </div>
                 </div>
-                <img class="sshModelImg" src="/assets/img/shushModel.png" alt="Model who shh with her finger">
-            </section>
-            <section class="expertise">
-                <hgroup class="expertiseCentered">
+                    <img class="discover__img--sshModelImg" src="/assets/img/shushModel.png" alt="Model who shh with her finger">
+                </section>
+            <section class="section--expertise">
+                <hgroup class="expertise__hgroup">
                     <p>LA MAKE UP FOR EVER ACADEMY</p>
-                    <h2 class="centeredTitle">plus de 20 ans d'expertise dans la formation</h2>
+                    <h2 class="expertise__title">plus de 20 ans d'expertise dans la formation</h2>
                 </hgroup>
-                <div class="academyBttn">
-                    <button>
-                        <div class="overflowPadding">
-                            <p><a href="">Academy Exhibition</a></p>
-                            <p class="textAnimation"><a href="">Academy Exhibition</a></p>
-                        </div>
-                    </button>
-                </div>
+                <button class="section__bttn">
+                    <div class="section__bttn--animationWrapper">
+                        <p><a href="">Academy Exhibition</a></p>
+                        <p class="section__bttn--textAnimated"><a href="">Academy Exhibition</a></p>
+                    </div>
+                </button>
             </section>
             <footer>
-                <div class="flexLogoImg">
+                <div class="footer__logoWrapper">
                     <img src="/assets/img/image 532.png" alt="logo" width="272.7px" height="137px">
                     <img src="/assets/img/image 531-1.png" alt="logo typo" width="272.7px" height="137px">
                 </div>
-                <div class="detailsFlex">
+                <div class="footer__informations">
                     <address>
                         <h5>contact</h5>
                         <a href="mailto:hello@figma.com">Email: hello@figma.com</a>
                         <a href="tel:+203555555">Phone: (203)555-5555</a>
                     </address>
-                    <div class="footerFlexColumn">
+                    <div class="footer__informations--columns">
                         <h5>opening hours</h5>
-                        <div class="scheduleFlexRow">
-                            <ul class="footerFlexColumn">
+                        <div class="footer__informationsWrapper">
+                            <ul class="footer__informations--columns">
                                 <li>mon-fri</li>
                                 <li>saturdays</li>
                                 <li>sundays</li>
                                 <li>holidays</li>
                             </ul>
-                            <ul class="footerFlexColumn">
+                            <ul class="footer__informations--columns">
                                 <li>5:00 - 23:00</li>
                                 <li>8:00 - 16:00</li>
                                 <li>8:00 - 13:00</li>
@@ -160,7 +162,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footerFlexColumn socialFlex">
+                    <div class="footer__informations--columns footer__informations--socials">
                         <h5>social</h5>
                         <a href="https://www.instagram.com/">instagram</a>
                         <a href="https://www.x.com/">x</a>

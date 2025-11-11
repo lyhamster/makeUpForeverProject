@@ -1,1 +1,2 @@
+import "./main.scss"
 import "./animation.scss"

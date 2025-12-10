@@ -1,7 +1,7 @@
 @keyframes dropdown-transition {
 
     0% {
-        opacity:0;
+        opacity: 0;
         transform: translateY(-15px);
     }; 
     40% {
@@ -26,7 +26,7 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    top:100%;
+    top: 100%;
     left: 0;
     visibility: hidden;
     background-color: white;
@@ -42,11 +42,12 @@
 .transitionZone {
     position: absolute;
     width: 100%;
-    right:0;
-    top:75%;
-    height:30%;
+    right: 0;
+    top: 75%;
+    height: 30%;
     visibility: hidden;
 }
+
 
 .navTitle:hover + .transitionZone {
     visibility: visible;
@@ -101,8 +102,8 @@
 }
 
 .titleSection__title--black {
-    font-size:45px;
-    color:white;
+    font-size: 45px;
+    color: white;
     background-color: black;
     padding: 20px 10px;
 }
@@ -165,6 +166,5 @@
     grid-column: 2;
     height: 100%;
 }
-
 
 

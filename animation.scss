@@ -7,35 +7,39 @@
 
     & .bttnTopAnimation {
         position: absolute;
-        transform: translateY(20px) ;
-        transition : transform 350ms cubic-bezier(.35,.14,.31,1);
+        transform: translateY(20px);
+        transition: transform 350ms cubic-bezier(.35,.14,.31,1);
     }
 
     &--textAnimated{
         position: absolute;
     }
-
+    
     & p {
         transition: transform 200ms ;
     }
 }  
 
-.section__bttn:hover p { 
-    transform: translateY(-25px);
+.section { 
+    &__bttn:hover p {
+      transform: translateY(-25px);    
+    }
 }
 
 // zoom sur image/ 
 
 .section {
-    &__imgWrapper{
+    &__imgWrapper {
         overflow: hidden;
         border-radius: 20px;    
     }
+
     &__img--asianModel {
         transition: 300ms ease-in-out;
         width: 100%;
         height: 100%;
     }
+
     &__img--asianModel:hover {
         transform: scale(1.1);
     }

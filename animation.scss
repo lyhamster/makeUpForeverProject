@@ -60,14 +60,14 @@
 @keyframes landingAnim {
     0% { 
         opacity: 0.005;
-        /* transform: translateY(50px); */
+        transform: translateY(50px);
         will-change: opacity;
     }
 
     100% {
         opacity: 1;
         will-change: opacity;
-        /* transform: translateY(0px); */
+        transform: translateY(0px); 
     }
 }
 

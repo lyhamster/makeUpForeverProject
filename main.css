@@ -39,37 +39,37 @@
 
 }
 
-.transitionZone {
+/* .transitionZone {
     position: absolute;
     width: 100%;
     right: 0;
     top: 75%;
     height: 30%;
     visibility: hidden;
+    z-index: 1;
 }
-
 
 .navTitle:hover + .transitionZone {
     visibility: visible;
-}
+} */
 
-.navTitle:hover + .transitionZone + .dropdownMenu {
+/* .navTitle:hover + .transitionZone + .dropdownMenu {
     visibility: visible;
     animation-name: dropdown-transition;
     animation-duration: 500ms;
-    opacity:1;
+    opacity: 1;
 }
 
 .transitionZone:hover + .dropdownMenu {
     visibility: visible;
     animation-name: dropdown-transition;
     animation-duration: 500ms;
-    opacity:1;
+    opacity: 1;
 }
 
 .transitionZone:hover, .dropdownMenu:hover {
     visibility: visible;
-}
+} */
 
 .navTitle {
     background-color: black;

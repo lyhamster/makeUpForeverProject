@@ -21,18 +21,6 @@
     gap: 10px;
 }
 
-.dropdownMenu {
-    display: grid;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    visibility: hidden;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
 .dropdownMenu--news {
     grid-template-columns: auto 1fr 1fr;
     grid-template-rows: 1fr 1fr;

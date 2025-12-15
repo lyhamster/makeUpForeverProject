@@ -1,5 +1,5 @@
 
-.section__bttn{
+.section__bttn {
     &--animationWrapper {
         position: relative;
         overflow: hidden;
@@ -45,6 +45,40 @@
     }
 }
 
+.greenInvolvement {
+    &__wrapper {
+       overflow: hidden;
+       border-radius: 20px;
+    }
+
+    &__img--powderFoundation {
+        transition: 300ms ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img--powderFoundation:hover {
+        transform: scale(1.4);
+    }
+}
+
+.discover {
+    &__img--wrapper {
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    &__img--sshModelImg {
+        transition: 300ms ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img--sshModelImg:hover { 
+        transform: scale(1.1);
+    }
+}
+// dropdown menu text animation to the right/ 
 .rightAnimation__test {
     overflow: hidden;
 }
@@ -57,6 +91,7 @@
     font-weight: bold;
 }
 
+// animation landing anim at first loading/
 @keyframes landingAnim {
     0% { 
         opacity: 0.005;
@@ -81,3 +116,51 @@ h1 {
     animation: landingAnim 350ms ease-in 600ms forwards;
 }
 
+// test pseudo element//
+.dropdownMenu {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    &:hover {
+        visibility: visible;
+    }
+    
+    // &::before {
+    // content: "";
+    // position: absolute;
+    // width: 100%;
+    // bottom: 100%;
+    // height: 4%;
+    // z-index: 1;
+    //     &--news {
+    //         visibility: visible;
+    //     }    
+    //     &--besteller {
+    //         visibility: visible;
+    //     }
+    // }
+}
+
+.navTitle:hover + .dropdownMenu {
+    visibility: visible;
+    animation: dropdown-transition 500ms backwards ;
+    opacity: 1;
+}
+
+// landing anim with js /
+
+.landingAnim {
+    &--opacity { 
+        opacity: 0;
+    }
+
+    &.inview {
+        animation: landingAnim 300ms ease-in 250ms forwards;    
+    }
+}

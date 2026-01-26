@@ -1,0 +1,170 @@
+.section__bttn {
+    &--animationWrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &.bttnTopAnimation {
+        position: absolute;
+        transform: translateY(20px);
+        transition: transform 350ms cubic-bezier(.35,.14,.31,1);
+    }
+
+    &--textAnimated{
+        position: absolute;
+    }
+    
+    & p {
+        transition: transform 200ms ;
+    }
+}  
+
+.section { 
+    &__bttn:hover p {
+      transform: translateY(-25px);    
+    
+      @media (max-width: 1200px) {
+        transform: translateY(-20px);
+      }
+    }
+}
+
+// zoom sur image/ 
+
+.section {
+    &__imgWrapper {
+        overflow: hidden;
+        border-radius: 20px;    
+    }
+
+    &__img--asianModel {
+        transition: 300ms ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img--asianModel:hover {
+        transform: scale(1.1);
+    }
+}
+
+.greenInvolvement {
+    &__wrapper {
+       overflow: hidden;
+       border-radius: 20px;
+    }
+
+    &__img--powderFoundation {
+        transition: 300ms ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img--powderFoundation:hover {
+        transform: scale(1.4);
+    }
+}
+
+.discover {
+    &__img--wrapper {
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    &__img--sshModelImg {
+        transition: 300ms ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img--sshModelImg:hover { 
+        transform: scale(1.1);
+    }
+}
+// dropdown menu text animation to the right/ 
+.rightAnimation__test {
+    overflow: hidden;
+}
+.rightAnimation__test p {
+    transition: transform 200ms ease-out;
+}
+
+.rightAnimation__test:hover p {
+    transform: translateX(10px);
+    font-weight: bold;
+}
+
+// animation landing anim at first loading/
+@keyframes landingAnim {
+    0% { 
+        opacity: 0.005;
+        transform: translateY(50px);
+        will-change: opacity;
+    }
+
+    100% {
+        opacity: 1;
+        will-change: opacity;
+        transform: translateY(0px); 
+    }
+}
+
+h1 {
+    opacity: 0;
+    animation: landingAnim 350ms ease-in 300ms forwards;
+    pointer-events: none;
+}
+
+.section--about {
+    opacity: 0;
+    animation: landingAnim 350ms ease-in 600ms forwards;
+}
+
+// test pseudo element//
+
+.navTitle:hover + .dropdownMenu {
+    visibility: visible;
+    animation: dropdown-transition 500ms backwards ;
+    opacity: 1;
+}
+.dropdownMenu {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    &:hover {
+        visibility: visible;
+    }
+    
+    &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 4%;
+    z-index: 1;
+        &--news {
+            visibility: visible;
+        }    
+        &--besteller {
+            visibility: visible;
+        }
+    }
+}
+
+// landing anim with js /
+
+.landingAnim {
+    &--opacity { 
+        opacity: 0;
+    }
+
+    &.inview {
+        animation: landingAnim 300ms ease-in 250ms forwards;    
+    }
+}

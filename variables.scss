@@ -1,0 +1,64 @@
+$main-bg: #FFFFFF;
+$dark-accent:  hsl(21, 75%, 74%);
+$light-accent: hsl(20, 100%, 95%);
+$main-fg: #000000;
+$alternative-fg: white;
+
+@font-face {
+    font-family: "anek tamil";
+    src: url("/assets/fonts/anek-tamil-tamil-800-normal.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anek Tamil';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff2) 
+    format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.ttf)
+    format('truetype'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff) 
+    format('woff');
+}
+
+// font variables and mixins/
+
+$main-font-headline: "anek tamil"; 
+$main-font-paragraph: "Geist"; 
+$alt-font: "geist";
+
+@mixin headline {
+    font-family: $main-font-headline;
+    font-size: 116px;
+    text-transform: uppercase;
+    color: $main-fg;
+}
+
+@mixin paragraph {
+    font-family: $main-font-paragraph;
+    font-size: 17px;
+    color: $main-fg;
+}
+
+@mixin link {
+    color: $alternative-fg;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+// layout container /
+
+@mixin layoutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light-accent;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@mixin discopverStyle { 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $light-accent;
+}

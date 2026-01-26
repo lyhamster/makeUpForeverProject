@@ -1,67 +1,4 @@
-$main-bg: #FFFFFF;
-$dark-accent:  hsl(21, 75%, 74%);
-$light-accent: hsl(20, 100%, 95%);
-$main-fg: #000000;
-$alternative-fg: white;
-
-@font-face {
-    font-family: "anek tamil";
-    src: url("/assets/fonts/anek-tamil-tamil-800-normal.ttf");
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Anek Tamil';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 800;
-    src: url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff2) 
-    format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.ttf)
-    format('truetype'), url(https://cdn.jsdelivr.net/fontsource/fonts/anek-tamil@latest/latin-800-normal.woff) 
-    format('woff');
-}
-
-// font variables and mixins/
-
-$main-font-headline: "anek tamil"; 
-$main-font-paragraph: "Geist"; 
-$alt-font: "geist";
-
-@mixin headline {
-    font-family: $main-font-headline;
-    font-size: 116px;
-    text-transform: uppercase;
-    color: $main-fg;
-}
-
-@mixin paragraph {
-    font-family: $main-font-paragraph;
-    font-size: 17px;
-    color: $main-fg;
-}
-
-@mixin link {
-    color: $alternative-fg;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-// layout container /
-
-@mixin layoutContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: $light-accent;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-@mixin discopverStyle { 
-    padding: 20px;
-    border-radius: 10px;
-    background-color: $light-accent;
-}
+@import "variables";
 
 h1, h2 {
     @include headline;
@@ -72,7 +9,6 @@ h1, h2 {
     //test/
     padding: 60px;
     margin-top: -70px;
-
    
 }
 
@@ -112,7 +48,6 @@ p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 // header /
@@ -133,8 +68,45 @@ header {
     }
 }
 
-// main section/
+// nav -- burger menu // 
 
+.navWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+
+    &--cross {
+        height: 40px;
+        width: 4px;
+        position: relative;
+        background-color: $main-fg;
+        right: 20px; 
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background-color: $main-fg;
+            transform: rotate(90deg);
+        }
+
+        &--transform {
+            transform: rotate(45deg);
+        }
+    } 
+}
+
+.crossWrapper {
+    width: 50px;
+    height: 50px;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+// main section/
 .section {
     &--about {
         display: grid;
@@ -169,7 +141,13 @@ header {
         display: flex;
         flex-direction: column;
         gap: 20px;
-    } 
+    }
+
+    @media (max-width: 1200px) {
+
+        h3 {font-size: 36px;    
+        }
+    }
 }
 
 .history, 
@@ -187,10 +165,8 @@ header {
 .section--discover { 
     display: grid;
     grid-template-columns: 30% 1fr;
-
     padding: 60px;
     margin-top: -130px;
-
     gap: 30px;
 }
 
@@ -204,6 +180,7 @@ header {
         grid-column: 2;
         border-radius: 20px;
     }
+
     &__img--sshModelImg { 
         width: 100%;
         height: 100%;
@@ -213,9 +190,9 @@ header {
         display: grid;
         // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         // padding: 20px;
-        // background-color: $light-accent;
-        // border-radius: 20px;
-        // margin-left: 10px;
+        background-color: $light-accent;
+        border-radius: 20px;
+        margin-left: 10px;
 
         gap: 10px;
     }
@@ -227,7 +204,13 @@ header {
     &__hgroup--foundation {
         grid-row: 2;
     }
-
+    
+    &__hgroup--waterproof {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
     &__bttnWrapper {
         // grid-row: 5;
         // display: flex;
@@ -242,7 +225,10 @@ header {
     align-items: center;
     justify-content: center;
     height: 480px;
-    gap: 18px;
+    gap: 40px;
+    border-radius: 20px;
+    margin: 60px;
+    margin-top: -20px;
 }
 
 .expertise {
@@ -250,13 +236,15 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: inherit;
+        gap: 40px;
     }
 
     &__title {
         font-size: 57px;
         text-align: center;
         line-height: 55px;
+        margin-top: 0px;
+        padding: 0px;
     }
 }
 
@@ -298,7 +286,11 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     background-color: $light-accent;
-    height: 480px;
+    height: 340px;
+
+    border-radius: 30px 30px 0px 0px;
+    margin: 60px;
+    margin-bottom: 0px;
 }
 
 .footer { 
@@ -357,5 +349,84 @@ address {
 
     a {
         @include footer-style-link;
+    }
+}
+
+@media screen and (max-width: 799px) { 
+    header {
+        position: unset;
+    }
+
+    .headerWrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: unset;
+        padding: 0px;
+    }
+    .hideBurgerMenu { 
+        display: none;
+    }
+    .burgerMenu__cross--hide {
+        display: none;
+    }
+    .hide--openMenu {
+        display: none;
+    }
+     .navTitle { 
+        display: none;
+    }
+
+    .navWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: unset;
+        width: 100%;
+    }
+
+    .crossWrapper {
+        display: flex;
+        align-self: flex-end;
+    }
+    div.dropdownMenu {
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        position: unset;
+        box-shadow: unset;
+    }
+
+    .dropdownMenu {
+        &--imgWrapper {
+            display: flex;
+        }
+
+        &__img--stickCream, 
+        &__img--settingPowder,
+        &__img--bestsellerproducts,
+        &__img--foundations {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .dropdownMenu__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .openMenu {
+        &--color {
+            background-color: $light-accent;
+        }
+        &--unset {
+            display: unset;
+        }
+        h1 {
+            font-size: 70px;
+        }
+        h2 {
+            font-size: 68px;
+        }   
     }
 }

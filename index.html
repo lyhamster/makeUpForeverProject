@@ -4,66 +4,74 @@
         <title>MAKE UP FOREVER</title>
         <link rel="shortcut icon" href="/assets/img/maquillage-mascara.png" >
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link href="main.css" rel="stylesheet"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
-    <body>
+    <body class>
         <header>
             <div class="headerWrapper">
                 <div class="headerWrapper__logo">
-                    <img src="/assets/img/image 532.png" alt="logo make up forever mouth" width="82px" height="41px">   
-                    <img src="assets/img/image 531-1.png" alt="logo make up forever typo" width="82px" height="41px">  
+                    <img class="hideBurgerMenu" src="/assets/img/image 532.png" alt="logo make up forever mouth" width="82px" height="41px">   
+                    <img class="hideBurgerMenu" src="assets/img/image 531-1.png" alt="logo make up forever typo" width="82px" height="41px">  
                 </div>
                 <div class="navWrapper">
-                    <section>
+                    <section class="crossWrapper">
+                        <div class="navWrapper--cross"></div>
+                    </section>
+                    <section class="hide--openMenu">
                         <a class="navTitle">nouveautés</a>
                         <!-- <div class="transitionZone"></div> -->
                         <div class="dropdownMenu dropdownMenu--news">
                             <div class="dropdownMenu__card">
                                 <h4 class="dropdownMenu__title--grid dropdownMenu__title--corner dropdownMenu__title--padding">nos nouveautés</h4>   
-                                <img class="dropdownMenu__img--stickCream" src="/assets/img/stickCream.png" alt="stick cream"> 
-                                <img class="dropdownMenu__img--settingPowder" src="/assets/img/powder.png" alt="setting powder">
-                            </div>
-                                <div class="rightAnimation__test dropdownMenu__hgroup dropdownMenu--border">
-                                    <h4 class="dropdownMenu--title">gamme super boost</h4>
-                                    <p class="rightAnination__test--p dropdownMenu--padding">super boost skin tint & lip gloss</p>
+                                <div class="dropdownMenu--img dropdownMenu__news--imgWrapper">
+                                    <img class="dropdownMenu__img--stickCream" src="/assets/img/stickCream.png" alt="stick cream"> 
+                                    <img class="dropdownMenu__img--settingPowder" src="/assets/img/powder.png" alt="setting powder">
                                 </div>
-                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                            </div>
+                            <div class="caca rightAnimation__test dropdownMenu__hgroup dropdownMenu--border">
+                                <h4 class="dropdownMenu--title">gamme super boost</h4>
+                                <p class="rightAnination__test--p dropdownMenu--padding">super boost skin tint & lip gloss</p>
+                            </div>
+                            <div class="caca dropdownMenu__hgroup dropdownMenu--border">
                                 <h4 class="dropdownMenu--title">poudres</h4>
                                 <p class="dropdownMenu--padding">hd skin perfecting powders</p>
                             </div>
-                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                            <div class="caca dropdownMenu__hgroup dropdownMenu--border">
                                 <h4 class="dropdownMenu--title">stick</h4>
                                 <p class="dropdownMenu--padding">artist color crayons</p>
                             </div>
-                            <div class="dropdownMenu__hgroup dropdownMenu--border">
+                            <div class="caca dropdownMenu__hgroup dropdownMenu--border">
                                 <h4 class="dropdownMenu--title">anti-cernes</h4>
                                 <p class="dropdownMenu--padding">couvrance totale</p>
                             </div>   
                         </div>   
                     </section> 
-                    <section>
-                        <a class="navTitle">best-seller</a>
+                    <section class="hide--openMenu">
+                        <a class="burgerMenu__cross--hide navTitle">best-seller</a>
                         <!-- <div class="transitionZone"></div> -->
-                        <div class=" dropdownMenu dropdownMenu--bestseller">
+                        <div class="dropdownMenu dropdownMenu--bestseller">
                             <div class="dropdownMenu__titleWrapper">
-                                <h4 class="dropdownMenu__title--corner">bestseller</h4>
-                                <h4 class="dropdownMenu--title dropdownMenu--border">hd skin</h4>
-                                <h4 class="dropdownMenu--title dropdownMenu--border">artist</h4>   
-                                <h4 class="dropdownMenu--title dropdownMenu--border">aqua resist</h4>   
-                                <h4 class="dropdownMenu--title dropdownMenu--border">super boost</h4> 
+                                <h4 class="dropdownMenu--bestseller dropdownMenu__title--corner">bestseller</h4>
+                                <h4 class="hideElement--bestseller dropdownMewnu dropdownMenu--title dropdownMenu--border">hd skin</h4>
+                                <h4 class="hideElement--bestseller dropdownMenu--title dropdownMenu--border">artist</h4>   
+                                <h4 class="hideElement--bestseller dropdownMenu--title dropdownMenu--border">aqua resist</h4>   
+                                <h4 class="hideElement--bestseller dropdownMenu--title dropdownMenu--border">super boost</h4> 
                             </div>
-                            <img class="dropdownMenu__img--bestsellerproducts" src="/assets/img/products.png"> 
-                            <img class="dropdownMenu__img--foundations" src="/assets/img/palette.png">
+                            <div class="hideElement--bestseller dropdownMenu__bestseller--imgWrapper">
+                                <img class="dropdownMenu__img--bestsellerproducts" src="/assets/img/products.png"> 
+                                <img class="dropdownMenu__img--foundations" src="/assets/img/palette.png">
+                            </div>
                         </div> 
                     </section> 
                 </div>
             </div>
         </header>
-        <main>
+        <main class="">
             <div class="transitionTest">
                 <h1 class="landingAnim">make up.<span class="darkAccentHighlight">for ever.</span></h1>
                 <section class="section--about">
@@ -103,7 +111,7 @@
             <section class="section--discover landingAnim landingAnim--opacity">
                 <div class="discover__wrapper">
                     <h3 class="discoverFrame discover__title">pensés pour vous</h3>
-                    <div class="discoverFrame discover__hgroup--foundation landingAnim">
+                    <div class="discoverFrame discover__hgroup--foundation">
                         <h4>hd skin</h4>
                         <p>Effet seconde peau, vous assure un teint 0 défaut.</p>
                     </div>
@@ -128,18 +136,18 @@
                     <img class="discover__img--sshModelImg" src="/assets/img/shushModel.png" alt="Model who shh with her finger">
                 </div>
                 </section>
-            <section class="section--expertise">
-                <hgroup class="expertise__hgroup">
-                    <p>LA MAKE UP FOR EVER ACADEMY</p>
-                    <h2 class="expertise__title">plus de 20 ans d'expertise dans la formation</h2>
-                </hgroup>
-                <button class="section__bttn">
-                    <div class="section__bttn--animationWrapper">
-                        <p><a href="">Academy Exhibition</a></p>
-                        <p class="section__bttn--textAnimated"><a href="">Academy Exhibition</a></p>
-                    </div>
-                </button>
-            </section>
+                <section class="section--expertise landingAnim landingAnim--opacity">
+                    <hgroup class="expertise__hgroup">
+                        <p class="expertise__text">LA MAKE UP FOR EVER ACADEMY</p>
+                        <h2 class="expertise__title">plus de 20 ans d'expertise dans la formation</h2>
+                    </hgroup>
+                    <button class="section__bttn">
+                        <div class="section__bttn--animationWrapper">
+                            <p><a href="">Academy Exhibition</a></p>
+                            <p class="section__bttn--textAnimated"><a href="">Academy Exhibition</a></p>
+                        </div>
+                    </button>
+                </section>
             <footer>
                 <div class="footer__logoWrapper">
                     <img src="/assets/img/image 532.png" alt="logo" width="272.7px" height="137px">
